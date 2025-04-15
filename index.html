@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="src/style.css" />
-  <title>AI French Poem Generator</title>
-</head>
-<body>
-  <header>
-    <h1>AI French Poem Generator</h1>
-  </header>
-  <main>
-    <form>
-      <input type="text" placeholder="Enter the topic of the French poem" autofocus required autocomplete="off" />
-      <input type="submit" value="Generate Poem" />
-    </form>
-    <div class="poem">
-      La tombe dit à la rose <br />
-      Des pleurs dont l'aube t'arrose
+  <link rel="stylesheet" href="src/styles.css" />
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI French Poem generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>AI French poem generator</h1>
+      </header>
+
+      <main>
+        <div class="form-container">
+          <form id="poem-generator-form">
+            <input
+              type="text"
+              placeholder="Enter the topic of the french poem"
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+            />
+            <input type="submit" class="submit-button" id="user-instructions" />
+          </form>
+          <div class="hint">i.e Flower, Chesse, Pizza</div>
+        </div>
+        <div class="poem hidden" id="poem"></div>
+      </main>
+
+      <footer>
+        The AI project was coded by
+        <a href="https://www.linkedin.com/in/alecanclini/" target="_blank"
+          >Miriam Alejandra Canclini</a
+        >
+        and is
+        <a href="https://github.com/malecanclini" target="_blank"
+          >open-sourced on Github</a
+        >
+        and is
+        <a
+          href="https://app.netlify.com/teams/malecanclini/sites"
+          target="_blank"
+          >hosted on Netlify</a
+        >
+      </footer>
     </div>
-  </main>
-  <footer>
-    This AI project was coded by <a href="https://github.com/malecanclini/" target="_blank">Alejandra Canclini</a> and is <a href="https://github.com/malecanclini/AI_Poem_Generator" target="_blank" > open-sourced on GitHub</a > and is <a href="https://poemgeneratorcanclini.netlify.app/" target="_blank" >hosted on Netlify</a >.
-  </footer>
-  <script src="src/index.js"></script>
-</body>
+    <script src="src/index.js"></script>
+  </body>
 </html>
